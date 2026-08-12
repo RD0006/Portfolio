@@ -62,27 +62,27 @@ const About = () => {
     <section
     ref={sectionRef}
       id="about"
-      className="mx-auto max-w-7xl px-6 py-32 px-12 py-48"
+      className="mx-auto max-w-7xl px-12 py-48"
     >
       <div className="grid gap-12 grid-cols-12">
 
         <div className="col-span-4">
-          <h2 className="about-title text-5xl font-bold tracking-tight text-7xl">
+          <h2 className="about-title text-neutral-50 font-bold tracking-tight text-7xl">
             About
           </h2>
         </div>
 
         <div className="col-span-8">
 
-          <h2 className="about-heading text-3xl font-medium text-3xl leading-12">
+          <h2 className="about-heading text-blue-200 font-medium text-3xl leading-12">
             I am an MCA student by role and a developer by heart. I enjoy working with anything and everything that involves writing code.
             <br />
-            <span className="about-subheading text-neutral-500 text-3xl">
+            <span className="about-subheading text-blue-100 text-3xl">
               I have developed full stack web applications and software. My sub-domain is AI/ML and Deep Learning.
             </span>
           </h2>
 
-          <p className="about-text mt-8 leading-7 text-neutral-500">
+          <p className="about-text mt-8 leading-7 text-neutral-100">
             Development, for me, is not just a dream job; it has been a passion since I first started coding seven years ago. I have developed a number of personal projects since, in all my domains and sub-domains. I try to challenge myself with new tools and techniques while developing these. Each and every project gives me a ground to learn, build, and grow. 
           </p>
 

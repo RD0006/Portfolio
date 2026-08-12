@@ -53,13 +53,13 @@ const Contact = () => {
     <section
       ref={sectionRef}
       id="contact"
-      className="mx-auto max-w-7xl px-6 py-32 px-12 py-48"
+      className="mx-auto max-w-7xl px-12 py-48"
     >
-      <h2 className="contact-title text-5xl font-bold tracking-tight text-7xl">
+      <h2 className="contact-title font-bold tracking-tight text-7xl">
         Contact Me
       </h2>
 
-      <div className="mt-16 flex flex-col justify-between gap-8 border-t border-white/10 pt-8 flex-row items-center">
+      <div className="mt-16 flex justify-between gap-8 border-t border-white/10 pt-8 flex-row items-center">
 
         <div className="contact-message text-xl text-neutral-50">
           Have an Idea? Let's Bring It to Life!
@@ -68,7 +68,7 @@ const Contact = () => {
         <div className="flex flex-wrap gap-x-6 gap-y-3 uppercase tracking-widest text-neutral-500">
           <a
             href="mailto:radhikadn2022@gmail.com"
-            className="contact-link transition-colors duration-300 hover:text-white"
+            className="contact-link transition-colors duration-300 text-orange-200"
           >
             Email
           </a>
@@ -77,7 +77,7 @@ const Contact = () => {
             href="https://www.linkedin.com/in/radhika-diwan"
             target="_blank"
             rel="noopener noreferrer"
-            className="contact-link transition-colors duration-300 hover:text-white"
+            className="contact-link transition-colors duration-300 text-blue-200"
           >
             LinkedIn
           </a>
@@ -86,7 +86,7 @@ const Contact = () => {
             href="https://github.com/RD0006"
             target="_blank"
             rel="noopener noreferrer"
-            className="contact-link transition-colors duration-300 hover:text-white"
+            className="contact-link transition-colors duration-300 text-green-200"
           >
             GitHub
           </a>

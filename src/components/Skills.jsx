@@ -46,6 +46,23 @@ const Skills = () => {
     return () => ctx.revert();
   }, []);
 
+  const skillColors = {
+  HTML: "text-red-200",
+  JavaScript: "text-yellow-100",
+  TypeScript: "text-blue-200",
+  React: "text-cyan-200",
+  "Tailwind CSS": "text-sky-200",
+  GSAP: "text-purple-200",
+  Java: "text-orange-200",
+  Python: "text-emerald-200",
+  "C++": "text-indigo-200",
+  TensorFlow: "text-orange-200",
+  Keras: "text-pink-200",
+  Pandas: "text-violet-200",
+  MySQL: "text-teal-200",
+  Git: "text-rose-200",
+};
+
   return (
     <section
       ref={sectionRef}
@@ -56,8 +73,8 @@ const Skills = () => {
 
         <div className="reveal mb-16">
 
-          <h2 className="font-bold tracking-tight text-7xl">
-            Tech Stack
+          <h2 className="font-bold tracking-tight text-7xl text-neutral-100">
+            Skills
           </h2>
         </div>
 
@@ -68,9 +85,13 @@ const Skills = () => {
               key={skill}
               className="skill border-b border-r border-white/10 transition duration-300 p-12"
             >
-              <span className="text-lg font-medium">
-                {skill}
-              </span>
+              <span
+              className={`text-lg font-medium ${
+                skillColors[skill] || "text-neutral-300"
+              }`}
+            >
+              {skill}
+            </span>
             </div>
           ))}
 

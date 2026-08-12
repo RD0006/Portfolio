@@ -37,6 +37,21 @@ const projects = [
 ];
 
 const Projects = () => {
+
+  const tagColors = {
+    React: "border-cyan-300 text-cyan-400",
+    ML: "border-sky-300 text-sky-400",
+    Tensorflow: "border-yellow-300 text-yellow-400",
+    Python: "border-blue-300 text-blue-400",
+    Flask: "border-green-300 text-green-400",
+    Java: "border-orange-300 text-orange-400",
+    GSAP: "border-purple-300 text-purple-400",
+    Data: "border-red-300 text-red-400",
+    Package: "border-indigo-300 text-indigo-400",
+    API: "border-emerald-300 text-emerald-400",
+    HTML: "border-teal-300 text-teal-400",
+    Tomcat: "border-neutral-300 text-neutral-400"
+  };
   return (
     <section
       id="projects"
@@ -46,12 +61,12 @@ const Projects = () => {
       <div className="reveal mb-16 flex items-end justify-between border-b border-white/10 pb-6">
 
         <div>
-          <h2 className="font-bold tracking-tight text-7xl">
+          <h2 className="font-bold tracking-tight text-7xl text-neutral-50">
             Projects
           </h2>
         </div>
 
-        <span className="text-neutral-600 block">
+        <span className="text-rose-200 block text-xl">
           2020 — 2026
         </span>
 
@@ -74,7 +89,7 @@ const Projects = () => {
                 {project.title}
               </h3>
 
-              <p className="leading-6 text-neutral-500 col-span-5">
+              <p className="leading-6 text-neutral-300 col-span-5">
                 {project.description}
               </p>
 
@@ -82,7 +97,9 @@ const Projects = () => {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-white/10 px-3 py-1 text-[15px] text-neutral-500"
+                    className={`rounded border px-4 py-1 text-[14px] ${
+                      tagColors[tag]
+                    }`}
                   >
                     {tag}
                   </span>
