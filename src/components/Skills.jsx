@@ -33,12 +33,12 @@ const Skills = () => {
       {
         y: 0,
         opacity: 1,
-        duration: 0.7,
+        duration: 0.5,
         stagger: 0.1,
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".skills-container",
-          toggleActions: "play reverse play reverse",
+          toggleActions: "restart none restart none",
         },
       });
     }, sectionRef);
@@ -83,10 +83,10 @@ const Skills = () => {
           {skills.map((skill) => (
             <div
               key={skill}
-              className="skill border-b border-r border-white/10 transition duration-300 p-12"
+              className="skill border-b border-r border-white/10 transition duration-300 p-12 hover:bg-white/[0.03]"
             >
               <span
-              className={`text-lg font-medium ${
+              className={`group-hover:translate-x-2 transition-transform text-lg font-medium ${
                 skillColors[skill] || "text-neutral-300"
               }`}
             >

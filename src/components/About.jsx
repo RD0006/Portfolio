@@ -13,7 +13,7 @@ const About = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 75%",
-          toggleActions: "play none none reverse",
+          toggleActions: "restart none restart none",
         },
       });
 
@@ -28,7 +28,7 @@ const About = () => {
           {
             y: 60,
             opacity: 0,
-            duration: 0.8,
+            duration: 0.6,
             ease: "power3.out",
           },
           "-=0.5"
@@ -38,7 +38,7 @@ const About = () => {
           {
             y: 40,
             opacity: 0,
-            duration: 0.7,
+            duration: 0.6,
             ease: "power3.out",
           },
           "-=0.45"
@@ -48,7 +48,7 @@ const About = () => {
           {
             y: 30,
             opacity: 0,
-            duration: 0.7,
+            duration: 0.6,
             ease: "power3.out",
           },
           "-=0.4"

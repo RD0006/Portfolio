@@ -13,14 +13,14 @@ const Contact = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 80%",
-          toggleActions: "play none none reverse",
+          toggleActions: "restart none restart none",
         },
       });
 
       tl.from(".contact-title", {
         y: 50,
         opacity: 0,
-        duration: 0.8,
+        duration: 0.5,
         ease: "power3.out",
       })
         .from(
@@ -28,7 +28,7 @@ const Contact = () => {
           {
             y: 30,
             opacity: 0,
-            duration: 0.7,
+            duration: 0.5,
             ease: "power3.out",
           },
           "-=0.4"
@@ -68,7 +68,7 @@ const Contact = () => {
         <div className="flex flex-wrap gap-x-6 gap-y-3 uppercase tracking-widest text-neutral-500">
           <a
             href="mailto:radhikadn2022@gmail.com"
-            className="contact-link transition-colors duration-300 text-orange-200"
+            className="contact-link transition-colors duration-300 text-orange-200 after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all hover:after:w-full"
           >
             Email
           </a>
@@ -77,7 +77,7 @@ const Contact = () => {
             href="https://www.linkedin.com/in/radhika-diwan"
             target="_blank"
             rel="noopener noreferrer"
-            className="contact-link transition-colors duration-300 text-blue-200"
+            className="contact-link transition-colors duration-300 text-blue-200 after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all hover:after:w-full"
           >
             LinkedIn
           </a>
@@ -86,7 +86,7 @@ const Contact = () => {
             href="https://github.com/RD0006"
             target="_blank"
             rel="noopener noreferrer"
-            className="contact-link transition-colors duration-300 text-green-200"
+            className="contact-link transition-colors duration-300 text-green-200 after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all hover:after:w-full"
           >
             GitHub
           </a>

@@ -26,7 +26,7 @@ const App = () => {
         .from("#navbar", {
           x: -50,
           opacity: 0,
-          duration: 0.8,
+          duration: 0.5,
           ease: "power3.out",
         })
         .from(".hero-line", {
@@ -35,25 +35,13 @@ const App = () => {
           duration: 0.5,
           stagger: 0.15,
           ease: "power4.out",
-        }, "-=0.2")
-        .from(".hero-description", {
-          y: 30,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power3.out",
-        }, "-=0.5")
-        .from(".hero-button", {
-          y: 20,
-          opacity: 0,
-          duration: 0.6,
-          ease: "power3.out",
-        }, "-=0.3");
+        }, "-=0.2");
 
       gsap.utils.toArray(".reveal").forEach((element) => {
         gsap.from(element, {
-          y: 80,
+          y: 35,
           opacity: 0,
-          duration: 1,
+          duration: 0.6,
           ease: "power3.out",
           scrollTrigger: {
             trigger: element,
@@ -62,18 +50,25 @@ const App = () => {
         });
       });
 
-      gsap.utils.toArray(".project-card").forEach((card, index) => {
-        gsap.from(card, {
-          y: 100,
-          opacity: 0,
-          duration: 1,
-          delay: index * 0.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
+      gsap.utils.toArray(".project-card").forEach((card) => {
+        gsap.fromTo(
+          card,
+          {
+            y: 40,
+            opacity: 0,
           },
-        });
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.5,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 80%",
+              toggleActions: "restart none restart none",
+            },
+          }
+        );
       });
 
       gsap.to(".marquee-text", {
@@ -83,7 +78,7 @@ const App = () => {
           trigger: ".marquee",
           start: "top bottom",
           end: "bottom top",
-          scrub: 1,
+          scrub: 0.4,
         },
       });
 

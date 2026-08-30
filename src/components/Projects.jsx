@@ -77,7 +77,7 @@ const Projects = () => {
         {projects.map((project) => (
           <div
             key={project.number}
-            className="project-card group cursor-pointer border-b border-white/10 py-8 transition-all duration-500 hover:px-4"
+            className="project-card group cursor-pointer border-b border-white/10 py-8 transition-all duration-500 hover:px-4 hover:bg-white/[0.02]"
           >
             <div className="grid gap-6 grid-cols-12 items-center">
 
@@ -85,7 +85,7 @@ const Projects = () => {
                 {project.number}
               </span>
 
-              <h3 className="text-3xl font-bold tracking-tight col-span-3">
+              <h3 className="text-3xl font-bold tracking-tight col-span-3 group-hover:translate-x-2 transition-transform">
                 {project.title}
               </h3>
 
@@ -93,7 +93,7 @@ const Projects = () => {
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-2 col-span-3 justify-end">
+              <div className="flex flex-wrap gap-2 col-span-3 justify-end group-hover:-translate-y-1 transition-transform">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
